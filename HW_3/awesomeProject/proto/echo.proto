@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package accounts;
+
+option go_package = "generated/";
+
+service Accounts {
+  rpc CreateAccount(CreateAccountRequest) returns (Empty) {}
+  rpc GetAccount(GetAccountRequest) returns (GetAccountResponse) {}
+  rpc PatchAccount(PatchAccountRequest) returns (Empty) {}
+  rpc ChangeAccount(ChangeAccountRequest) returns (Empty) {}
+  rpc DeleteAccount(DeleteAccountRequest) returns (Empty) {}
+}
+
+message Empty {}
+
+message CreateAccountRequest {
+  string name = 1;
+  int32 amount = 2;
+}
+
+message GetAccountRequest {
+  string name = 1;
+}
+
+message GetAccountResponse {
+  string name = 1;
+  int32 amount = 2;
+}
+
+message PatchAccountRequest {
+  string name = 1;
+  int32 amount = 2;
+}
+
+message ChangeAccountRequest {
+  string name = 1;
+  string newname = 2;
+}
+
+message DeleteAccountRequest {
+  string name = 1;
+}
