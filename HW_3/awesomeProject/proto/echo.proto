@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package accounts;
 
-option go_package = "generated/";
+option go_package = "awesomeProject/proto";
 
 service Accounts {
   rpc CreateAccount(CreateAccountRequest) returns (Empty) {}

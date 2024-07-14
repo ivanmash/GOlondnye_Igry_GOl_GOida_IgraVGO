@@ -4,7 +4,7 @@
 // - protoc             v5.27.2
 // source: proto/echo.proto
 
-package generated
+package proto
 
 import (
 	context "context"
